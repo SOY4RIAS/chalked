@@ -3,16 +3,18 @@ part of './routes.dart';
 class CoreHandler {
   static final paths = {
     'auth': {
-      'login': {
-        'path': '/auth/login',
-        'handler': Handler(handlerFunc: (context, parameters) => LoginScreen())
-      },
+      'login': '/auth/login',
     }
   };
 
-  static getAuthHandler(String module) =>
-      CoreHandler.paths['auth'][module]['handler'];
+  static final rootPath = '/';
+  static final root = Handler(
+    handlerFunc: (context, parameters) => RootScreen(),
+  );
 
-  static getAuthPath(String module) =>
-      CoreHandler.paths['auth'][module]['path'];
+  static final login = Handler(
+    handlerFunc: (context, parameters) => LoginScreen(),
+  );
+
+  static getAuthPath(String module) => CoreHandler.paths['auth'][module];
 }

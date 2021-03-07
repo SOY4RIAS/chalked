@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "737496573827",
+    "project_id": "notesapp-fl",
+    "storage_bucket": "notesapp-fl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737496573827:android:71055653099d48eff778b6",
+        "android_client_info": {
+          "package_name": "dev.santiagoarias.notic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737496573827-kootvssfol8jlm7rj34854rqao4tcmu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.santiagoarias.notic",
+            "certificate_hash": "f1dcfa7f87ad56c6af9aae09687ae7856fee2a58"
+          }
+        },
+        {
+          "client_id": "737496573827-ask5bv9c956lnr1bv30l2oabd1m7red5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNlPnfXBLJPDIqfTmPCmT_MHwMTO5f4Cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737496573827-ask5bv9c956lnr1bv30l2oabd1m7red5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
