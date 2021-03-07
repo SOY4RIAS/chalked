@@ -33,8 +33,13 @@ dependencies:
 
   # core
   fluro: ^2.0.3
-  firebase_core: "^1.0.0"
 
+  ## Firebase
+  firebase_core: "^1.0.0"
+  firebase_auth: "^1.0.0"
+
+  # state management
+  flutter_riverpod: ^0.13.1
 
 dev_dependencies:
   flutter_test:

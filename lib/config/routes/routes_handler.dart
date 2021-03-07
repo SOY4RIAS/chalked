@@ -1,20 +1,26 @@
 part of './routes.dart';
 
-class CoreHandler {
-  static final paths = {
-    'auth': {
-      'login': '/auth/login',
-    }
-  };
+final auth = Application().auth;
+final router = Application().router;
 
-  static final rootPath = '/';
+class CoreHandler {
   static final root = Handler(
-    handlerFunc: (context, parameters) => RootScreen(),
+    handlerFunc: (context, parameters) {
+      auth.authStateChanges().listen((user) {
+        if (user != null) {
+          router.navigateTo(context, '/dashboard');
+
+          return;
+        }
+
+        router.navigateTo(context, '/auth/login');
+      });
+
+      return RootScreen();
+    },
   );
 
   static final login = Handler(
     handlerFunc: (context, parameters) => LoginScreen(),
   );
-
-  static getAuthPath(String module) => CoreHandler.paths['auth'][module];
 }
