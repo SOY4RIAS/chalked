@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'core/app/app.dart';
+import 'package:get/get.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(await initApp());
+import 'app/routes/app_pages.dart';
+
+void main() {
+  runApp(
+    GetMaterialApp(
+      title: "Application",
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
+    ),
+  );
 }
