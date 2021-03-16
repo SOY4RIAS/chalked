@@ -37,6 +37,8 @@ dependencies:
   ## Firebase
   firebase_core: "^1.0.0"
   firebase_auth: "^1.0.0"
+  google_sign_in: "^4.5.1"
+
 
   # state management
   flutter_riverpod: ^0.13.1

@@ -5,22 +5,19 @@ final router = Application().router;
 
 class CoreHandler {
   static final root = Handler(
-    handlerFunc: (context, parameters) {
-      auth.authStateChanges().listen((user) {
-        if (user != null) {
-          router.navigateTo(context, '/dashboard');
-
-          return;
-        }
-
-        router.navigateTo(context, '/auth/login');
-      });
-
-      return RootScreen();
+    handlerFunc: (context, params) {
+      return RouteAwareWidget(AppPaths.root, child: RootScreen());
     },
   );
 
   static final login = Handler(
-    handlerFunc: (context, parameters) => LoginScreen(),
+    handlerFunc: (context, parameters) =>
+        RouteAwareWidget(AppPaths.core.auth.login, child: LoginScreen()),
   );
+}
+
+class ModulesHandler {
+  static final dashboard = Handler(handlerFunc: (context, params) {
+    return RouteAwareWidget(AppPaths.dashboard, child: DashboardScreen());
+  });
 }

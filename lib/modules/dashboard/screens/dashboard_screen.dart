@@ -1,3 +1,4 @@
+import 'package:chalked/config/application.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -8,6 +9,13 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text('Dashboard'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Application().auth.signOut();
+        },
+        icon: Icon(Icons.login_outlined),
+        label: Text('Logout'),
       ),
     );
   }

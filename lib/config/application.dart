@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fluro/fluro.dart';
+import 'package:flutter/widgets.dart';
 
 class Application {
   static final Application _instance = Application._();
@@ -22,6 +23,7 @@ class Application {
   FluroRouter _router;
   FirebaseAuth _auth;
   FirebaseApp _fireApp;
+  final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
   FluroRouter get router => _instance._router;
   FirebaseAuth get auth => _instance._auth;
