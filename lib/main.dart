@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await runApp(
+  runApp(
     GetMaterialApp(
       theme: Themes.light,
       darkTheme: Themes.dark,
