@@ -1,4 +1,4 @@
-package com.example.chalked
+package dev.santiagoarias.notic
 
 import io.flutter.embedding.android.FlutterActivity
 
